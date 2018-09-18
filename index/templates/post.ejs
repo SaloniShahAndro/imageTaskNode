@@ -1,0 +1,171 @@
+<head>
+    <meta charset="UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/css/font-awesome.min.css" />
+    <link rel='stylesheet' href='/assets/css/bootstrap.min.css' />
+    <link rel="stylesheet" href="/assets/css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="assets/js/calendar/dist/css/pignose.calendar.min.css"/>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="https://www.jqueryscript.net/demo/Clean-jQuery-Date-Time-Picker-Plugin-datetimepicker/jquery.datetimepicker.css" />
+    <link rel="stylesheet" href="/assets/css/common.css" />
+    <link rel="stylesheet" href="/assets/css/news.css" />
+    <!-- <link rel="stylesheet" href="/assets/css/themes/theme1.css" /> -->
+  
+    <link rel="stylesheet" href="/assets/css/dataTables.bootstrap.css" />
+    <link href="/assets/css/dataTables.responsive.css" rel="stylesheet">
+    <link href="/assets/css/introjs.css" rel="stylesheet">
+    <script src="/assets/js/jquery-2.2.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="/assets/js/bootstrap.min.js"></script>
+    <script src="/assets/js/jquery.validate.js"></script>
+    <script src="/assets/js/jquery.datetimepicker.js"></script>
+    <script src="/assets/js/custom.js"></script>
+    <script src="/assets/js/dataTables.responsive.js"></script>
+    <script src="/assets/js/jquery.dataTables.min.js"></script>
+    <script src="/assets/js/ckeditor/ckeditor.js"></script>
+    <script src="/assets/js/intro.js"></script>
+    <script src="/assets/js/jquery.dirrty.js"></script>
+    <script src="/assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="/assets/js/bootstrap-select.min.js"></script>
+    <link href="https://silviomoreto.github.io/bootstrap-select/dist/css/bootstrap-select.min.css" />
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery.form/3.51/jquery.form.min.js"></script> 
+    
+</head>
+
+      
+<main>
+    <div class="container">
+        <div class="title-bar">
+            <div class="row">
+                <div class="col-sm-12">
+                <h1 class="">Post</h1>
+                </div>
+                <div class="col-sm-6">
+                    <a class="btn-sm btn btn-outline-red btn-delete" href="/logout">Logout</a>
+                </div>
+            </div>
+        </div>
+            
+        <div class="">
+            <div class="panel block-panel" >
+                <form class="form-horizontal" method="post" id="loginUser" action="/post/" >
+                    <div id="signupalert" style="display:none" class="alert"></div>                            
+                    
+                    <div class="form-group">
+                        <label for="title" class="col-md-3 control-label">Title<span class="error">*</span></label>
+                        <div class="col-md-9">
+                            <input type="text" class="form-control" name="title" placeholder="Title">
+                        </div>
+                    </div>
+                   
+                    <div class="form-group">
+                        <label for="title" class="col-md-3 control-label">Description<span class="error">*</span></label>
+                        <div class="col-md-9">
+                            <input type="text" class="form-control" id="description" name="description" placeholder="Description">
+                        </div>
+                    </div>  
+                   
+                    <div class="form-group">                                      
+                        <div class="controls btn-wrap">
+                            <button id="btn-save" type="submit" disabled class="btn btn-primary"><i class="icon-hand-right"></i>Save</button>
+                            <span id="status"></span>
+                            <a class="btn btn-primary" href="javascript:history.back()"> Back </a>
+                        </div>
+                    </div>                           
+                </form>
+            </div>
+        </div>
+    </div>
+</main>
+<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
+<script type="text/javascript">
+
+var init_val = $('#loginUser').serialize();
+
+
+function isChanged(){
+    if($('#loginUser').serialize() != init_val){
+        return true;
+       
+    } else {
+        return false;
+    }
+}
+
+$(document).ready(function(){    
+    $("#status").empty().text(''); 
+    $("#loginUser").dirrty().on("dirty", function(){
+        $('#btn-save').removeAttr('disabled');
+    }).on("clean", function(){
+        $('#btn-save').attr('disabled','disabled');
+        
+    });
+    
+   
+    $( "#loginUser" ).validate({
+        
+        rules: {
+            title: {required: true},   
+            description: {required: true}, 
+        },     
+        errorPlacement: function ( error, element ) {       
+            if ( element.prop( "type" ) === "radio" ) {
+                error.insertAfter( element.parent().parent( ".r-wrap" ) );
+            } else {
+                error.insertAfter( element );
+            }
+        }
+    });
+
+   
+    $('#btn-save').prop("disabled", true);
+    $("#loginUser :input").change(function(e){
+        $('#btn-save').prop("disabled",!isChanged());        
+    });
+    $(window).bind('beforeunload', function(e){
+        if(isChanged()){return true;}else {e=null;}
+    });
+
+    $("#loginUser").submit(function() {
+        if($( "#loginUser" ).valid()){      
+            $('#btn-save').attr('disabled','disabled');
+            //$("#status").empty().text("Saving...");
+           
+            console.log(">>>>>>>>serialize",$("#loginUser").serialize)
+            $(this).ajaxSubmit({
+                error: function(xhr) {
+                    $("#status").html('');
+                   
+                },
+                success: function(res) {
+                    $('#btn-save').removeAttr('disabled');
+                   
+                    if(res.status == 'failed'){                         
+                        // $("#signupalert").html(res.message);
+                        // $("#signupalert").addClass('alert-danger');
+                        // $("#signupalert").show();  
+                        setTimeout(function() {$('#signupalert').fadeOut('fast');}, 3000);    
+                        //$("#status").empty().text('');   
+                        
+                        
+                    }
+                    else {                                
+                        // $("#signupalert").html(res.message);
+                        // $("#signupalert").removeClass('alert-danger');
+                        // $("#signupalert").addClass('alert-success');
+                        // $("#signupalert").show(); 
+                        $(window).unbind('beforeunload');  
+                     
+                        setTimeout(function(){window.location.href = "/postlist";},1000); 
+                                                                          
+                    }
+                }
+                
+            });
+
+            return false;
+        }
+    }); 
+});
+</script>

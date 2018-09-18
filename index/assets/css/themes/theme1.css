@@ -1,0 +1,65 @@
+.panel-group .panel-title a, body,
+.pignose-calendar .pignose-calendar-unit a, h1,.paginate_button, .paginate_button:hover, .paginate_button:focus,
+.dropdown-menu > li > a,
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6,
+.modal-body, .close, .close:hover { color: #222222 }
+
+.committee_updates .meet-icon .fa,
+body .pignose-calendar .pignose-calendar-header .pignose-calendar-week,
+.menu-trigger, .menu-trigger:hover, .menu-trigger:focus,
+#pdf-meta button, #pdf-meta input, #page-count-container { color: #fff; }
+
+main { background-color: #ffffff; }
+.modal-content, .panel, .block-panel { border: 1px solid #ddd; background: #fff; }
+.alert-warning, .modal-header, .modal-footer { color: #000; border-color: #ddd; }
+.update-new li, .header-border, .user-list li { border-bottom: 1px solid #ddd; }
+.new-updates .panel { background: #f5f5f5; }
+.panel-group .panel-title a.view-all-meeting { color: #000; border-color: #000; }
+
+.announcements-list li > span, .detail-block p,.update-new p,.update-new h3 small { color: #555555; }
+.pignose-calendar .pignose-calendar-header .pignose-calendar-week.pignose-calendar-week-sat, .pignose-calendar .pignose-calendar-header .pignose-calendar-week.pignose-calendar-week-sun,
+.pignose-calendar .pignose-calendar-unit.pignose-calendar-unit-sat a, .pignose-calendar .pignose-calendar-unit.pignose-calendar-unit-sun a { color: #A4A4A4; }
+
+.btn-bd-gray { border-color: #222; color: #222;}
+
+.pignose-calendar .pignose-calendar-top .pignose-calendar-top-nav .pignose-calendar-top-icon { color: #999; }
+body .pignose-calendar .pignose-calendar-top .pignose-calendar-top-nav { border: 1px solid #ddd;}
+
+.header-bar .dropdown-menu > li > a:hover { color: #fff; }
+
+.form-control,
+select.form-control,
+button.multiselect,
+.dropdown-menu  {background-color: #fff; border: 1px solid #ccc; color: #555; }
+.form-control[disabled], .form-control[readonly], fieldset[disabled] .form-control { background-color: #eee; opacity: 1 }
+
+.bootstrap-select .dropdown-menu > li > a:focus, .bootstrap-select .dropdown-menu > li > a:hover, .btn-default.active, .btn-default:active, .open > .dropdown-toggle.btn-default, .btn-default.active.focus, .btn-default.active:focus, .btn-default.active:hover, .btn-default.focus:active, .btn-default:active:focus, .btn-default:active:hover, .open > .dropdown-toggle.btn-default.focus, .open > .dropdown-toggle.btn-default:focus, .open > .dropdown-toggle.btn-default:hover,
+.bootstrap-select .dropdown-toggle:hover, .bootstrap-select .dropdown-toggle:focus, .bootstrap-select .dropdown-toggle:active { background-color: #fff; color: #222; box-shadow: none; }
+
+
+em.checkmark { background: #fff; border: 1px solid #999; }
+.radio-style input[type="radio"]:checked + em.checkmark::before { background-color: #999999; }
+
+div.dataTables_filter input, .dataTables_length .dropdown-toggle { background-color: #fff; border: 1px solid #222; color: #222; }
+
+.bd_d { background: #fff; border-bottom: 1px solid #ddd; border-top: 1px solid #ddd; }
+.bd_d.first { border-left: 1px solid #ddd;}
+.bd_d.last { border-right: 1px solid #ddd; }
+.table-btn { border-left: 1px solid #ddd;}
+
+#tblactivity .bd_d { border-bottom: 1px solid #ddd; border-top: 0; border-radius:0  }
+
+.numberList, 
+.main-mom-block, .main-action-block { background: #fff; border:1px solid #ddd; }
+
+.main-mom-block .block-panel, .main-action-block .block-panel { padding: 0px; border: 0; }
+.main-action-block .fileupload .btn, body .dropzone { border: 1px solid #ddd; background: #fff; color: #222 }
+
+.addbutton .dropzone, .addbutton .dropzone i, 
+.main-mom-block .alert-warning, .main-action-block .alert-warning { color: #38c1a5 }
+
+/* bootstrap select */
+.bootstrap-select .dropdown-toggle {background-color: #fff; border: 1px solid #ccc; color: #555; }
+.dropdown-menu > .active > a, .dropdown-menu > .active > a:focus, .dropdown-menu > .active > a:hover, .dropdown-menu > li > a:focus, .dropdown-menu > li > a:hover { background-color: #f6f6f6; color: #222; }
+
+.leftpanel li.current > a { background: #ebad00 }

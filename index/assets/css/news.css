@@ -1,0 +1,254 @@
+.news-list{color: #333; font-size: 14px; line-height: 22px;}
+.news-list li {list-style: none;padding: 20px;background: #fff;margin: 0 0 20px;}
+.news-list h3 {color: #27AD74;font-size: 24px;margin: 0;padding: 0 0 10px;}
+.news-list p {
+    padding: 0 0 20px;
+    margin: 0;
+    display: inline;
+}
+.read-more-btn {
+    color: #27AD74;
+    display: inline-block;
+}
+.read-more-btn a {
+    color: #27AD74;
+}
+.read-more-btn a:hover{text-decoration: underline;}
+
+ 
+.marquee {
+    top: 6em;
+    position: relative;
+    box-sizing: border-box;
+    animation: marquee 15s linear infinite;
+}
+.news-load{overflow: hidden;}
+
+.marquee:hover {
+    animation-play-state: paused;
+}
+
+
+/* marge changes */
+.ui-widget-header {
+    background: #464648 none repeat scroll 0 0;
+    border: 1px solid #5c5c5e;
+    color: #ffffff;
+    font-weight: bold;
+
+}
+.ui-datepicker .ui-datepicker-prev, .ui-datepicker .ui-datepicker-next{
+    background-color: #cfcfcf none repeat scroll 0 0;
+}
+.ui-datepicker .ui-datepicker-title select {
+    background:#1a1d22;
+    border: 1px solid #707070;
+    font-weight: normal;
+    margin: 0 2px;
+  }
+
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default, .ui-button, html .ui-button.ui-state-disabled:hover, html .ui-button.ui-state-disabled:active {
+    background: #464646 none repeat scroll 0 0;
+    border: 1px solid #555555;
+    color: #ffffff;
+    font-weight: normal;
+  }
+.xdsoft_datetimepicker{
+    background: #464646 none repeat scroll 0 0;
+    border: 1px solid #555555;
+    color: #ffffff;
+    border-radius: 4px;
+  }
+ body .pac-container {
+    background: #464646 none repeat scroll 0 0;
+    border: 1px solid #555555;
+    border-radius: 2px;
+    box-shadow: none;
+    box-sizing: border-box;
+    font-family: Arial,sans-serif;
+    overflow: hidden;
+    position: absolute !important;
+    z-index: 1000;
+  }
+  .xdsoft_datetimepicker .xdsoft_calendar td, .xdsoft_datetimepicker .xdsoft_calendar th {
+    background: #484848 none repeat scroll 0 0;
+    border: 1px solid #555555;
+    border-collapse: collapse;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 12px;
+    height: 25px;
+    padding: 0;
+    text-align: right;
+    width: 14.2857%;
+  }
+  .xdsoft_datetimepicker .xdsoft_next, .xdsoft_datetimepicker .xdsoft_prev {
+    border: 0 none currentcolor;
+    border-radius: 3px;
+    cursor: pointer;
+    display: block;
+    height: 25px;
+    opacity: 0.5;
+    outline: medium none currentcolor;
+    overflow: hidden;
+    padding: 0;
+    position: relative;
+    text-indent: 100%;
+    white-space: nowrap;
+    width: 25px;
+  }
+
+  .xdsoft_datetimepicker .xdsoft_label{
+      background-color: transparent;
+  }
+  .xdsoft_datetimepicker .xdsoft_timepicker .xdsoft_time_box > div > div {
+    background: #464646 none repeat scroll 0 0;
+    border-bottom-width: 0;
+    border-collapse: collapse;
+    border-top: 1px solid #555555;
+    cursor: pointer;
+    font-size: 12px;
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+    color: #FFF;
+}
+.xdsoft_datetimepicker .xdsoft_timepicker .xdsoft_time_box {
+    border-bottom: 1px solid #555555;
+  }
+.xdsoft_datetimepicker .xdsoft_calendar td:hover, .xdsoft_datetimepicker .xdsoft_timepicker .xdsoft_time_box > div > div:hover {
+background: #EBAD00 none repeat scroll 0 0 !important;
+box-shadow: none !important;
+color: #ffffff !important;
+}
+.xdsoft_time_box {
+    border: 1px solid #555555;
+  }
+  .xdsoft_datetimepicker .xdsoft_month {
+    display: inline-block;
+    float: none;
+    text-align: right;
+    width: auto;
+  }
+  .xdsoft_datetimepicker .xdsoft_year {
+    display: inline-block;
+    float: none;
+    width: auto;
+  }
+
+  .ui-state-hover, .ui-widget-content .ui-state-hover, .ui-widget-header .ui-state-hover, .ui-state-focus, .ui-widget-content .ui-state-focus, .ui-widget-header .ui-state-focus, .ui-button:hover, .ui-button:focus {
+    background: #cfcfcf none repeat scroll 0 0;
+    border: 1px solid #efefef;
+    color: #000000;
+    font-weight: normal;
+  }
+.ui-widget-content {
+    background: #2c2c2e none repeat scroll 0 0;
+    color: #fff;
+  }
+.ui-widget.ui-widget-content {
+    border: 1px solid #4c4c4e;
+}
+.ui-datepicker .ui-datepicker-header {
+    padding: 0.3em 0;
+}
+.ui-datepicker .ui-datepicker-prev, .ui-datepicker .ui-datepicker-next{
+    background-color: #9f9f9f;
+}
+
+.modal-backdrop{
+    z-index: 9;
+}
+body .pac-item-query{
+    color: #FFF;
+}
+body .pac-item {
+    border-top: 1px solid #565656;
+    color: #ffffff;
+}
+body .pac-item:hover {
+    background-color: #5d5d5d;
+}
+.tooltip[role="tooltip"]{
+    display: none !important
+}
+/* .title-bar >.row>div{
+    width: auto;
+}
+.title-bar > .row > div:nth-of-type(2) {
+    float: right;
+  } */
+.cke_top {
+    background: #1a1d22 none repeat scroll 0 0;
+    border-bottom: 1px solid #1a1d22;
+    padding: 6px 8px 2px;
+    white-space: normal;
+}
+.cke_inner {
+    background: #1a1d22 none repeat scroll 0 0;
+    display: block;
+    padding: 0;
+  }
+  .pignose-calendar .pignose-calendar-unit .pignose-calendar-button-schedule-container .pignose-calendar-button-schedule-pin{
+    position: relative;
+    top: -5px;
+  }
+/* Make it move! */
+@keyframes marquee {
+    0%   { top:   8em }
+    100% { top: -11em }
+}
+ 
+.marquee .news_item{text-align: left;}
+.marquee .news_item a{padding: 0 0 5px;}
+
+.news-detail{background: #fff; padding: 20px;}
+/* manage profile */
+.card { display: inline-block; position: relative; width: 100%; margin: 25px 0; box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14); border-radius: 3px; color: rgba(0, 0, 0, 0.87); background: #fff; }
+.card-profile, .card-testimonial { margin-top: 60px; text-align: center; }
+.card-profile .card-avatar, .card-testimonial .card-avatar { width: 130px; height: 130px; margin: -50px auto 0; border-radius: 50%; overflow: hidden;
+box-shadow: 0 10px 30px -12px rgba(0, 0, 0, 0.42), 0 4px 25px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2); }
+.card img { width: 100%; height: 100%; object-fit: cover; }
+.card-profile .card-avatar + .content, .card-testimonial .card-avatar + .content { margin-top: 15px;  }
+.card p { padding: 15px 20px; }
+.card h4, .card h3 { margin-top: 10px; margin-bottom: 10px; }
+.card h4 { color: #999999; font-size: 14px; }
+.card h3 { font-size: 18px; color: #27AD74; }
+.card .btn { margin-bottom: 20px;}
+.card h3 span { display: block; margin: 10px 0; font-size: 16px; font-family: 'blender_probook', sans-serif;  color: rgba(0, 0, 0, 0.87);; }
+.pdetail { background: #fff; padding: 30px; box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);     margin-top: 60px; }
+/* manage profile emd */
+
+
+.management-detail {
+    background: #fff;
+    padding: 20px;
+}
+.management-detail .card, .management-detail .pdetail{box-shadow: none;}
+.management-detail .content {
+    padding: 0 0 15px;
+    color: #999;
+}
+.management-detail .pdetail{margin: 0; padding: 0 0 10px;}
+.management-detail h3 {
+    font-size: 24px;
+    color: #27AD74;
+    padding: 0 0 10px;
+}
+.management-detail h4 {
+    padding: 0px 0 5px;
+}
+.no-profile-found{
+    font-size: 40px;
+    color: #999;
+    text-align: center;
+    padding: 15% 0 0;
+}
+.block-panel{
+    padding: 20px;
+}
+
+
+/* 18-1-2018 */
+
+/* 18-1-2018 end */

@@ -1,0 +1,29 @@
+.dashicons li > a, a.menucollapse, .leftpanel {background: #FF3636;}
+.leftpanel li > a { border-bottom: 1px solid rgba(255,255,255,0.5);}
+.dashicons li > a i.fa-plus, .user-detail a { color: #FF3636  }
+
+.leftpanel li.current > a {
+	opacity: 1;
+	background: #27ad74;
+}
+.leftpanel li.current > a,.dashicons li > a:hover { background:#de1919; }
+
+.panel-primary > .panel-heading {
+	background-color: #FF3636;
+	border-color: #FF3636;
+}
+.panel-primary {
+	border-color: #FF3636;
+}
+
+.paginate_button { color: #222; border-color: #222 }
+.paginate_button.current {
+	color: #FF3636;
+	border-color: #FF3636;
+}
+
+.btn-primary { background-color: #222; border-color: #222 }
+.btn-primary:hover {
+	background: #000;
+	border-color: #000;
+}

@@ -1,0 +1,93 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/css/font-awesome.min.css" />
+    <link rel='stylesheet' href='/assets/css/bootstrap.min.css' />
+    <link rel="stylesheet" href="/assets/css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="assets/js/calendar/dist/css/pignose.calendar.min.css" />
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="https://www.jqueryscript.net/demo/Clean-jQuery-Date-Time-Picker-Plugin-datetimepicker/jquery.datetimepicker.css"
+    />
+    <link rel="stylesheet" href="/assets/css/common.css" />
+    <link rel="stylesheet" href="/assets/css/news.css" />
+
+    <link rel="stylesheet" href="/assets/css/dataTables.bootstrap.css" />
+    <link href="/assets/css/dataTables.responsive.css" rel="stylesheet">
+    <link href="/assets/css/introjs.css" rel="stylesheet">
+    <script src="/assets/js/jquery-2.2.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="/assets/js/bootstrap.min.js"></script>
+    <script src="/assets/js/jquery.validate.js"></script>
+    <script src="/assets/js/jquery.datetimepicker.js"></script>
+    <script src="/assets/js/custom.js"></script>
+    <script src="/assets/js/dataTables.responsive.js"></script>
+    <script src="/assets/js/jquery.dataTables.min.js"></script>
+    <script src="/assets/js/ckeditor/ckeditor.js"></script>
+    <script src="/assets/js/intro.js"></script>
+    <script src="/assets/js/jquery.dirrty.js"></script>
+    <script src="/assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="/assets/js/bootstrap-select.min.js"></script>
+    <link href="https://silviomoreto.github.io/bootstrap-select/dist/css/bootstrap-select.min.css" />
+</head>
+<main>
+    <div class="container">
+        <div class="title-bar">
+            <div class="row">
+                <div class="col-sm-6">
+                    <h1 class="">Post List</h1>
+                </div>
+
+            </div>
+        </div>
+        <div class="">
+            <div id="signupalert" style="display:none" class="alert"></div>
+            <div class="">
+                <% if(postData.length > 0){ %>
+                    <table width="100%" class="table responsive table-striped commuittee_table table-hover " id="tblemployee">
+                        <tbody>
+                            <% for(var i=0; i<(postData).length; i++) {%>
+                                <tr data-id="<%= postData[i].id %>">
+
+                                    <td>
+                                        <div class="bd_d detail-table">
+                                            <h2 class="user_title">
+                                                <%= postData[i].title %>
+
+                                            </h2>
+                                            <p>
+                                                <%= postData[i].description %>
+                                            </p>
+
+
+                                        </div>
+                                    </td>
+                                    <td width="120" class="tooltip-demo">
+                                        <div class="bd_d  last">
+                                            <div class="table-btn">
+
+                                                <a class="btn-sm btn btn-outline-red btn-delete" href="/post/delete/<%=postData[i].id%>">Delete</a>
+
+                                                <a class="btn btn-default btn-sm" href="/post/edit/<%=postData[i].id%>">Edit</a>
+
+                                            </div>
+                                        </div>
+                                    </td>
+
+                                </tr>
+                                <% } %>
+                        </tbody>
+                    </table>
+                    <% } else { %>
+
+                        <% }%>
+
+
+            </div>
+        </div>
+    </div>
+</main>
+
+</html>
